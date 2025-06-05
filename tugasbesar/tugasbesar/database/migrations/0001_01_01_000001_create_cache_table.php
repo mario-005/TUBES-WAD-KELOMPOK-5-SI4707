@@ -9,21 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('cache', function (Blueprint $table) {
-            $table->string('key')->primary();
-            $table->mediumText('value');
-            $table->integer('expiration');
-        });
-
-        Schema::create('cache_locks', function (Blueprint $table) {
-            $table->string('key')->primary();
-            $table->string('owner');
-            $table->integer('expiration');
+        Schema::create('ulasans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_rumah_makan');
+            $table->string('nama_pengulas');
+            $table->integer('rating');
+            $table->text('komentar');
+            $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
