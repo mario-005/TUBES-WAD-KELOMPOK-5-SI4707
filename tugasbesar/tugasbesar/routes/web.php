@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RumahMakanController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::resource('rumah-makan', RumahMakanController::class);
+
